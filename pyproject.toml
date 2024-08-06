@@ -1,0 +1,13 @@
+[tool.poetry]
+description = "API to load data to google sheets"
+authors = ["Alexandros Vamvakaris-Skrivanos <vamvas@outlook.com.gr>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
