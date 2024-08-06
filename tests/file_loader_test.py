@@ -1,4 +1,4 @@
-from data_loader.file_loader import load_csv
+from src.data_loader.file_loader import load_csv
 
 
 def test_load_csv_reads_csv_into_a_list_of_dicts(tmp_path):
