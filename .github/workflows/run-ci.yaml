@@ -1,6 +1,6 @@
-name: Run Continuous Integration Automated Tests and Other Checks
+name: CI Tests, Lint, and Type Checks
 
-run-name: ${{ github.actor }} is running tests
+run-name: ${{ github.actor }} is running CI checks
 
 on:
   pull_request:
@@ -12,7 +12,7 @@ on:
       - 'master'
 
 jobs:
-  run-tests:
+  run-ci:
     runs-on: ubuntu-latest
 
     steps:
