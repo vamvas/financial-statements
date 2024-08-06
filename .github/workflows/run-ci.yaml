@@ -40,9 +40,9 @@ jobs:
         run: |
           poetry run pytest
 
-      - name: Run Black as Linter
+      - name: Run flake8 as Linter
         run: |
-          poetry run flake8 --check .
+          poetry run flake8 .
 
       - name: Run Type Hint Checks
         run: |
