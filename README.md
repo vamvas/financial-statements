@@ -1,8 +1,7 @@
 # <span style="color: #00BFC4;">Description</span>
 
 
-This repository uses `poetry` for managing depndencies and `pre-commit` for managing and maintaining
-pre-commit hooks.
+This repository uses `poetry` for managing depndencies and `pre-commit` for managing and maintaining pre-commit hooks.
 
 <br>
 
@@ -33,13 +32,14 @@ Poetry should always be installed in a dedicated virtual environment to isolate 
 
 - Lock File: Regenerates the poetry.lock file to reflect the updated versions of the dependencies. This means that after running poetry update, poetry.lock will be updated to include the new versions of the dependencies that were installed.
 
+- Using `poetry add <package-name>` updates both the pyproject.toml and the poetry.lock files.
+
 <br>
 
 # <span style="color: #00BFC4;">Using pre-commits</span>
 
-If you are using the repository for the first time run `pre-commit install` to install the pre-commit hooks
-in the .pre-commit-config.yaml file
+If you are using the repository for the first time run `pre-commit install` to install the pre-commit hooks in the .pre-commit-config.yaml file.
 
-- Update tag for hooks from repository using `pre-commit autoupdate`
+- Update tag for hooks from repository using `pre-commit autoupdate`.
 
-- Run against all the files using `pre-commit run --all-files`
+- Run against all the files using `pre-commit run --all-files`.

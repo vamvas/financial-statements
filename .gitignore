@@ -3,6 +3,7 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 **/.ipynb_checkpoints
+.coverage
 
 # Raw files
 raw_data/
