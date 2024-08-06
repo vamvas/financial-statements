@@ -1,0 +1,18 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+    -   id: end-of-file-fixer
+    -   id: trailing-whitespace
+
+-   repo: https://github.com/pycqa/flake8
+    rev: '7.1.1'
+    hooks:
+    -   id: flake8
+        name: Run Linter (flake8)
+
+-   repo: https://github.com/pre-commit/mirrors-mypy
+    rev: 'v1.11.1'
+    hooks:
+    -   id: mypy
+        name: Run Type Hint Checks (mypy)
