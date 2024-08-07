@@ -38,7 +38,7 @@ jobs:
 
       - name: 🧪 Run tests with coverage
         run: |
-          poetry run pytest --cov=src --cov-report=xml --cov-report=term-missing
+          poetry run pytest --cov=src --cov-report=xml:coverage_artifacts/coverage.xml --cov-report=term-missing
 
       - name: 📈 Save coverage report
         uses: actions/upload-artifact@v3
@@ -48,7 +48,7 @@ jobs:
 
       - name: 🏷️ Generate coverage badge
         run: |
-          poetry run coverage-badge -o coverage.svg -f
+          poetry run coverage-badge -o coverage_artifacts/coverage.svg -f
 
       - name: 🏷️ Save coverage badge
         uses: actions/upload-artifact@v3
