@@ -1,11 +1,12 @@
-# <span style="color: #00BFC4;">Description</span>
+# Description
+![Coverage Badge](coverage_artifacts/coverage.svg)
 
 
 This repository uses `poetry` for managing depndencies and `pre-commit` for managing and maintaining pre-commit hooks.
 
 <br>
 
-# <span style="color: #00BFC4;">Using poetry</span>
+# Using poetry
 
 Poetry should always be installed in a dedicated virtual environment to isolate it from the rest of your system. It should in no case be installed in the environment of the project that is to be managed by Poetry. If you dont have poetry installed you can install it in the global environment using `pip install poetry`. You can install new dependencies using `poetry add <package-name>`.
 
@@ -36,7 +37,7 @@ Poetry should always be installed in a dedicated virtual environment to isolate 
 
 <br>
 
-# <span style="color: #00BFC4;">Using pre-commits</span>
+# Using pre-commits
 
 If you are using the repository for the first time run `pre-commit install` to install the pre-commit hooks in the .pre-commit-config.yaml file.
 
