@@ -38,24 +38,7 @@ jobs:
 
       - name: 🧪 Run tests with coverage
         run: |
-          poetry run pytest --cov=src --cov-report=xml:coverage_artifacts/coverage.xml --cov-report=term-missing
-
-      - name: 📈 Save coverage report
-        uses: actions/upload-artifact@v4
-        with:
-          name: coverage-report
-          path: coverage_artifacts/coverage.xml
-
-      - name: 🏷️ Generate coverage badge
-        run: |
-          poetry run coverage-badge -o coverage_artifacts/coverage.svg -f
-
-      - name: 🏷️ Save coverage badge
-        uses: actions/upload-artifact@v4
-        with:
-          name: coverage-badge
-          path: coverage_artifacts/coverage.svg
-
+          poetry run pytest --cov=src
 
       - name: 🧹 Run flake8 as Linter
         run: |
