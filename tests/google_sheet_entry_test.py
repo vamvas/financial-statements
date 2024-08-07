@@ -26,12 +26,12 @@ def test_mapping():
         }
     ]
 
-    sut = GoogleSheetEntry(input_data).df
+    sut = GoogleSheetEntry(input_data)
 
-    assert sut.columns.to_list() == ["Date", "Description", "Value"]
-    assert sut.loc[0, "Date"] == "2024-01-02"
-    assert sut.loc[1, "Date"] == "2024-04-03"
-    assert sut.loc[0, "Description"] == "some_description"
-    assert sut.loc[1, "Description"] == "another_description"
-    assert sut.loc[0, "Value"] == -100.35
-    assert sut.loc[1, "Value"] == 280.00
+    assert sut.df.columns.to_list() == ["Date", "Description", "Value"]
+    assert sut.df.loc[0, "Date"] == "2024-01-02"
+    assert sut.df.loc[1, "Date"] == "2024-04-03"
+    assert sut.df.loc[0, "Description"] == "some_description"
+    assert sut.df.loc[1, "Description"] == "another_description"
+    assert sut.df.loc[0, "Value"] == -100.35
+    assert sut.df.loc[1, "Value"] == 280.00
