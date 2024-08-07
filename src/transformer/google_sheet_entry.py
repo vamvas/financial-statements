@@ -24,4 +24,8 @@ class GoogleSheetEntry():
             :, ["Date", "Description", "Value"]
             ]
 
+        transactions_df["Date"] = transactions_df[
+            "Date"
+            ].dt.strftime('%Y-%m-%d')
+
         return transactions_df

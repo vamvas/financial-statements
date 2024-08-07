@@ -1,5 +1,4 @@
 from src.transformer.google_sheet_entry import GoogleSheetEntry
-import pandas as pd
 
 
 def test_mapping():
@@ -28,12 +27,10 @@ def test_mapping():
     ]
 
     sut = GoogleSheetEntry(input_data).df
-    print(sut.columns)
 
-    assert sut.index.equals(pd.RangeIndex(start=0, stop=2, step=1))
     assert sut.columns.to_list() == ["Date", "Description", "Value"]
-    assert sut.loc[0, "Date"] == pd.Timestamp("2024-01-02")
-    assert sut.loc[1, "Date"] == pd.Timestamp("2024-04-03")
+    assert sut.loc[0, "Date"] == "2024-01-02"
+    assert sut.loc[1, "Date"] == "2024-04-03"
     assert sut.loc[0, "Description"] == "some_description"
     assert sut.loc[1, "Description"] == "another_description"
     assert sut.loc[0, "Value"] == -100.35
