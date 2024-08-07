@@ -47,15 +47,15 @@ jobs:
         run: |
           mkdir -p coverage_artifacts
 
-          mv coverage.xml coverage_artifacts/ || echo "coverage.xml not found"
-          mv coverage.svg coverage_artifacts/ || echo "coverage.svg not found"
+          mv coverage.xml coverage_artifacts/
+          mv coverage.svg coverage_artifacts/
 
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
           git add coverage_artifacts/
-          git commit -m "Add coverage artifacts"
-          git push
+          git diff --cached --quiet || git commit -m "Add coverage artifacts"
+          git push origin HEAD:${{ github.ref_name }}
 
       - name: 🧹 Run flake8 as Linter
         run: |
