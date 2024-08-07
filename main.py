@@ -7,8 +7,10 @@ transactional_data = load_csv("raw_data/transactional_data.csv")
 
 # Upload Data to Google Sheet
 google_sheet_data = GoogleSheetEntry(transactional_data).df
+
 GoogleSheet(
-    'credentials/google_service_account.json'
+    "credentials/google_service_account.json",
+    "1GI3MmJm-vJTPEm1fC5C03JD3i2Riw5d9GWCwiQLsMp4"
     ).write_data_to_google_sheet_tab(
         "Data", google_sheet_data
         )
