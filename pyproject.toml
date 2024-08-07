@@ -8,6 +8,8 @@ package-mode = false
 [tool.poetry.dependencies]
 python = "^3.11"
 pandas = "^2.2.2"
+gspread = "^6.1.2"
+gspread-formatting = "^1.2.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.2"
