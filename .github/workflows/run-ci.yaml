@@ -54,9 +54,10 @@ jobs:
           git config user.email "github-actions@github.com"
 
           git add coverage_artifacts/
-          git diff --cached --quiet || git commit -m "Add coverage artifacts"
-          git push origin HEAD:${{ github.ref_name }}
-
+          git diff --cached --quiet || (
+            git commit -m "Add coverage artifacts" &&
+            git push origin HEAD:refs/heads/${{ github.head_ref }}
+          )
       - name: 🧹 Run flake8 as Linter
         run: |
           poetry run flake8 .
