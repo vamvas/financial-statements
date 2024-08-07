@@ -40,6 +40,10 @@ jobs:
         run: |
           poetry run pytest --cov=src --cov-report=xml --cov-report=term-missing
 
+      - name: 🏷️ Generate coverage badge
+        run: |
+          poetry run coverage-badge -o coverage.svg -f
+
       - name: 🧹 Run flake8 as Linter
         run: |
           poetry run flake8 .
