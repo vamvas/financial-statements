@@ -10,3 +10,6 @@ htmlcov/
 
 # Raw files
 raw_data/
+
+# Credentials
+credentials/
