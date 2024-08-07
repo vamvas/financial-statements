@@ -38,26 +38,8 @@ jobs:
 
       - name: 🧪 Run tests with coverage
         run: |
-          poetry run pytest --cov=src --cov-report=xml --cov-report=term-missing
-          poetry run coverage-badge -o coverage.svg -f
+          poetry run pytest --cov=src
 
-      - name: 📥 Save coverage badge and report
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          mkdir -p coverage_artifacts
-
-          mv coverage.xml coverage_artifacts/
-          mv coverage.svg coverage_artifacts/
-
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-
-          git add coverage_artifacts/
-          git diff --cached --quiet || (
-            git commit -m "Add coverage artifacts" &&
-            git push origin HEAD:refs/heads/${{ github.head_ref }}
-          )
       - name: 🧹 Run flake8 as Linter
         run: |
           poetry run flake8 .

@@ -1,5 +1,4 @@
 # Description
-![Coverage Badge](coverage_artifacts/coverage.svg)
 
 
 This repository uses `poetry` for managing depndencies and `pre-commit` for managing and maintaining pre-commit hooks.
